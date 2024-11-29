@@ -1,0 +1,11 @@
+
+
+.editor-wrapper-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Лек box-shadow */
+}
+
+.run-code-button {
+    position: absolute;
+    top: 10.5em;
+    left: 40em;
+}
