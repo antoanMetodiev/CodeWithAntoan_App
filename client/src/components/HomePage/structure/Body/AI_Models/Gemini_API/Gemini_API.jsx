@@ -32,13 +32,14 @@ const Gemini_API = () => {
         }
     }
 
-    // Функция за форматиране на отговора с Markdown
+
+    // Функция за форматиране на отговора с Markdown:
     const formatCodeResponse = (response) => {
         return `
-\`\`\`java
-${response}
-\`\`\`
-        `;
+                \`\`\`java
+                ${response}
+                \`\`\`
+                        `;
     };
 
     return (
