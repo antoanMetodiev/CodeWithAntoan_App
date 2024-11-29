@@ -55,7 +55,7 @@ const Codewars = () => {
 
     return (
         <div>
-            <h2>CodeWithAntoan Tasks:</h2>
+            {/* <h2>CodeWithAntoan Tasks:</h2> */}
 
             {!openSpecificTask ? (
                 <section className={style['all-tasks-container']}>
@@ -89,11 +89,22 @@ const Codewars = () => {
                     )}
                 </section>
             ) : (
-                <div key={specificTask.id}>
-                    <h3>{specificTask.name}</h3>
+                <div
+                    className={style['specific-task-container']}
+                    key={specificTask._id}
+                >
+                    {/* <h3 className={style['task-title']}>{specificTask.name}</h3> */}
+                    <span className={style['task-description-text']}>{"- " + specificTask.desc_BG}</span>
+                    <section className={style['task-tests-container']}>
+                        {specificTask.tests.map(test => {
+                            return (
+                                <p>
+                                    {test}
+                                </p>
+                            )
+                        })}
+                    </section>
                     <CodeEditor />
-                    <p>{specificTask.desc_BG}</p>
-                    {/* <TaskDescription description={specificTask.desc_BG} /> */}
                 </div>
             )}
 
