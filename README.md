@@ -1,3 +1,1 @@
-In development...
-
 # CodeWithAntoan_App
